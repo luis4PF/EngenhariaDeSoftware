@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        EXEMPLO DE DATA USANDO JS
+    </title>
+    <h1>
+        VERSÃO DO RANGEL 
+    </h1>   <!-- script do Rangel  ctrl + K + C para comentar a linha-->
+    <script type="text/javascript" src="date.js" defer></script>
+    
+
+<BR>
+    <h1>
+        VERSÃO DA PROFESSORA
+    </h1>
+    <!-- script da professora -->
+    <script type="text/javascript">
+        let date = new Date();
+        let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.write(date.toLocaleDateString('pt-BR', options));
+    </script>
+    
+</head>
+<body>
+    <p><span id="dia_se"></span>, <span id="dia"></span> de <span id="mes"></span> de <span id="ano"></span></p>
+</body>
+</html>
