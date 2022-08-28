@@ -1,39 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="config.css">
+    <title>Relogio on</title>
+    <meta charset="UTF-8" />
+    <link href="css.css" rel="stylesheet">
 </head>
 
-<body>
-    <div class="container">
-        <p>Palíndromo</p>
-        <input type="text" value="" id="text">
-        <button id="button">VERIFICAR</button>
-        <p id="result"></p>
-      </div>
+<body onload="horarioAtual()">
+    <div class="cor">
+    <h2 id="rel"></h2>
+    <script>
+    
+        function horarioAtual() {
+    
+            let hora = new Date().toLocaleTimeString();
+    
+            document.getElementById("rel").innerHTML = hora;
+    
+            setTimeout(horarioAtual, 1000)
+    
+        }
+    </script>
+    </div>
 </body>
-<script>
-    const button = document.querySelector('#button');
-const resultText = document.querySelector('#result');
-
-function invertText(text) {
-  const changedText = text.split('').reverse().join('');
-  return text === changedText ? true : false;
-}
-button.addEventListener('click', () => {
-  const textValue = document.querySelector('#text').value;
-  const result  = invertText(textValue);
-
-  result
-    ? resultText.innerHTML = 'O texto é um palídromo'
-  : resultText.innerHTML = 'O texto não é um palídromo';
-});
-</script>
 
 
 </html>
