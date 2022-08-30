@@ -11,4 +11,6 @@ body {
   .cor {
     color: rgb(255, 255, 255);
   }
-  
+  .bot{
+    border: 20%;
+  }
