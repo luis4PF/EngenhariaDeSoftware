@@ -1,19 +1,18 @@
-var el = document.getElementById("btVerificar");
-el.addEventListener("click", isPalindromo, false);
+let btVerificar = document.getElementById("btVerificar");
+btVerificar.addEventListener("click", Palindromo);
 
-function isPalindromo() {
+function Palindromo() {
     let texto = document.getElementById('txtbox').value;
-    let textoSemEspaco = texto.replace(" ", "").toLowerCase();
-    let textInvertido = inverter(textoSemEspaco);
+    let textInvertido = inverter(texto);
 
-    if(textoSemEspaco == textInvertido)
-        alert(texto + "É UM PALÍNDROMO")
+    if(texto == textInvertido)
+        alert(texto + " É UM PALÍNDROMO")
     else
-        alert(texto + "NÃO É UM PALÍNDROMO")        
+        alert(texto + " NÃO É UM PALÍNDROMO")        
 }   
 
 function inverter(str) {
-    var newString = " ";
+    var newString = "";
     for (var i = str.length - 1; i >= 0; i --){
         newString += str[i];
     }
