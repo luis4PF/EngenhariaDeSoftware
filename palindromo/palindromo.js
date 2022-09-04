@@ -1,14 +1,14 @@
-let btVerificar = document.getElementById("btVerificar");
-btVerificar.addEventListener("click", Palindromo);
+let verify = document.getElementById("verify");
+verify.addEventListener("click", Palindromo);
 
 function Palindromo() {
-    let texto = document.getElementById('txtbox').value;
-    let textInvertido = inverter(texto);
+    let text = document.getElementById('textbox').value;
+    let textInverted = inverter(text);
 
-    if(texto == textInvertido)
-        alert(texto + " É UM PALÍNDROMO")
+    if(text == textInverted)
+        alert(text + " É UM PALÍNDROMO")
     else
-        alert(texto + " NÃO É UM PALÍNDROMO")        
+        alert(text + " NÃO É UM PALÍNDROMO")        
 }   
 
 function inverter(str) {
