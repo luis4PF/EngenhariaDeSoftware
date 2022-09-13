@@ -15,18 +15,19 @@
     <div id="root"></div>
     <!-- type define o uso do babel no script-->
     <script type="text/babel">
-        
-        const element - (
-            <h1 className="greeting">
-                Hello, World;
-        )
 
-        const element = (
+        const elemento = (
+            <h1 className="greeting">
+                Hello, World!
+            </h1>
+        );
+
+        const element = React.createElement(
             'h1',
-            {className: 'greeting'},
+            {className: 'greeting' },
             'HEllo Word!'
         );
-        ReactDOM.render(element,document.getElementById('root'));
+        ReactDOM.render(element, document.getElementById('root'));
     </script>
 
 </body>

@@ -8,19 +8,25 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="palindromo.css">
     <title>Adicionando o Label</title>
 </head>
 
 <body>
     <div id="root"></div>
+    <h1 class="cor">VEM ESTUDAR NA FATEC</h1>
     <!-- type define o uso do babel no script-->
     <script type="text/babel">
-        const element = (
-            <div>
-                <h1> Hello!</h1>
-                <h2> Good to see you here.</h2>
-            </div>);
-        ReactDOM.render(element, document.getElementById('root'));
+        function typeWrite(element) {
+            const texto = element.innerHTML.split('');
+            element.innerHTML = '';
+            texto.forEach((letra, i) => {
+                setTimeout(() => element.innerHTML += letra, 75 * i);
+            });
+        }
+        const frase = document.querySelector('h1');
+        typeWrite(frase);
+        ReactDOM.render(texto, document.getElementById('root'));
     </script>
 
 </body>
