@@ -13,22 +13,28 @@
 </head>
 
 <body>
-    <div id="root"></div>
-    <h1 class="cor">VEM ESTUDAR NA FATEC</h1>
-    <!-- type define o uso do babel no script-->
-    <script type="text/babel">
-        function typeWrite(element) {
-            const texto = element.innerHTML.split('');
-            element.innerHTML = '';
-            texto.forEach((letra, i) => {
-                setTimeout(() => element.innerHTML += letra, 75 * i);
-            });
-        }
-        const frase = document.querySelector('h1');
-        typeWrite(frase);
-        ReactDOM.render(texto, document.getElementById('root'));
-    </script>
+    <div class="cor">
+        <div id="root"></div>
+        <h1 class="cor"></h1>
+        <!-- type define o uso do babel no script-->
+        <script type="text/babel">
+            let i = -1;
+            let speed = 50;
 
+            const txt = {
+                frase: 'VENHA ESTUDAR NA FATEC'
+            }
+            function typeWriter() {
+                if (i < txt.frase.length) {
+                    document.getElementById("root").innerHTML += txt.frase.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+            const element = <h1 class="cor">{typeWriter()}</h1>;
+            ReactDOM.render(element, document.getElementById("root"));
+        </script>
+    </div>
 </body>
 
 </html>

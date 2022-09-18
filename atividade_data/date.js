@@ -1,5 +1,5 @@
 // Dia da semana
-const days = ["Domingo","Segunda-Feira","Terça-Feira","Quarta-Feira","Quinta-Feira","Sexta-Feira","Sabádo"];
+const days = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sabádo"];
 
 const d_s = new Date();
 let day = days[d_s.getDay()];
@@ -10,7 +10,7 @@ const dia = new Date();
 document.getElementById("dia").innerHTML = dia.getDate();
 
 // Mês
-const months = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
+const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
 const d = new Date();
 let mes = months[d.getMonth()];
